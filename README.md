@@ -8,6 +8,12 @@ A collection of PowerShell scripts designed to help diagnose the root cause of W
 - They **do not** install any software.
 - They **only read** from the Windows Event Logs and system information to generate a text report.
 
+## Compatibility
+- **Supported OS:** Windows 10, Windows 11, Windows Server 2016+.
+- **Legacy Support:** Windows 7 and 8.1 are supported if **PowerShell 5.1** is installed.
+    - *Note:* The scripts use `Get-ComputerInfo` which requires PowerShell 5.1+. Core event log collection will still work on older PowerShell versions, but system info gathering might fail.
+- **Requirement:** Must be run as **Administrator**.
+
 ## Scripts Overview
 
 ### 1. `collect_hang_logs.ps1`
